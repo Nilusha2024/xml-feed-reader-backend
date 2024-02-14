@@ -1,0 +1,40 @@
+{
+  "name": "leisure-holgings-backend-server",
+  "version": "1.0.0",
+  "description": "leisure-holgings-backend-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./build && tsc",
+    "start": "nodemon",
+    "deploy": "rm -rf ./build/* && tsc && scp -r build/* nilu@172.16.10.49:/home/nilu/workspace/leisure-sports-back-end/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/5theta/leisure-sports-back-end.git"
+  },
+  "author": "Lakshan Dissanayake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/5theta/leisure-sports-back-end/issues"
+  },
+  "homepage": "https://gitlab.com/5theta/leisure-sports-back-end#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.19",
+    "@types/rethinkdb": "^2.3.16",
+    "@types/socket.io": "^2.1.8",
+    "body-parser": "^1.19.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "rethinkdb": "^2.4.2",
+    "socket.io": "^2.3.0"
+  }
+}
